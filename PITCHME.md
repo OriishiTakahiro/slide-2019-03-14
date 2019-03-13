@@ -1,12 +1,19 @@
-@snap[north-west span-30]
+@snap[west span-30]
 ![アイコン](img/hetare.jpg)
 @snapend
 
-@snap[north-east span-60]
+@snap[east span-60]
+
 居石峻寛 (Oriishi Takahiro)  
-徳島大学大学院 M1
-阿南高専プロコン部OB
-最近はクラウド中心
+
+<ul>
+ <li>徳島大学大学院 M1  
+ <li>阿南高専プロコン部OB  
+ <li>宗教は vim, i3-wm  
+ <li>Haskellの文法はふつくしい...  
+ <li>最近の興味はクラウド中心  
+</ul>
+
 @snapend
 
 --- 
