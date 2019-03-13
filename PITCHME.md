@@ -107,12 +107,12 @@ VM(Virtual Machine)とLinuxコンテナが主要
   APIサーバなどステートレスな部分での利用が適する
 
 ---
-### 次の発表ではDockerを始める上で
-### 知っておいてほしいことをしゃべります！
+### 次の発表ではDockerを始める前に
+### 知ってほしいことをしゃべります！
 
 ---
 
-## Dockerの始め方
+## Dockerへの準備
 
 ---
 
@@ -138,7 +138,7 @@ Linuxコンテナの
 
 - ドキュメントの充実
 - 様々なツールによるサポート
-- Docker for windowsやDocker for macOSが提供
+- Docker for windowsやDocker for macOSが提供  
   (VM上でLinuxを起動)
 
 ---
@@ -148,7 +148,43 @@ Linuxコンテナの
 ---
 #### Dockerのアーキテクチャ
 ![Dockerのアーキテクチャ](http://docs.docker.jp/_images/architecture.png)
-
 @size[10px](アーキテクチャの理解 http://docs.docker.jp/v1.11/engine/understanding-docker.html より引用)
+
 ---
 #### Dockerのライフサイクル
+![Dockerのアーキテクチャ](img/lifecycle.png)
+
+---
+### デモでDockerの雰囲気を
+### 掴んでもらいます！
+
+---
+#### Dockerfileの例
++++?code=./src/Dockerfile
+@[1](ベースとなるイメージ)
+@[3](ソースファイルの追加)
+@[5](環境変数HOGEの設定)
+@[7](作業ディレクトリの指定)
+@[8-13](コマンドを実行して環境を作成)
+@[15](実行ユーザを変更)
+@[17](コンテナ実行時のコマンドを指定)
+
+---
+#### サーバアプリケーション
++++?code=./src/app/server.go
+@[11-17](環境変数HOGEと現在時刻をレスポンスに書き込む)
+
+---
+#### コマンド
++++?code=./src/cmdlist.sh
+
+---
+#### セキュリティ上のチェック
+
+- イメージのDockerfileは公開されているか?
+- 実行ユーザはroot以外に設定されているか?
+- /etc/var/dcker.sockは  
+  コンテナにマウントされていないか?
+
+---
+### Dockerをはじめて快適な開発を！
