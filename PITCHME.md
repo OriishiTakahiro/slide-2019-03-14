@@ -16,38 +16,13 @@
 
 @snapend
 
---- 
+---
 
-## Dockerで加速する
+## Linuxコンテナで加速する
 ## ステートレスな
 ## アプリケーション実行環境
 
 ---  
-
-#### アジェンダ
-
-- Dockerって何?
-- Dockerのメリット/デメリット
-- Dockerの使い方
-- Dockerを使う上で気をつけること
-- Dockerおよびコンテナをとりまく環境
-
---- 
-
-#### Dockerって何?
-
----  
-#### Dockerとは
-
-Linuxコンテナの  
-管理ツール/エコシステム  
-
-- コンテナライフサイクルの管理
-- Docker CLIによる管理操作の簡易化
-- Dockerfileによるコンテナ環境の作成，配付
-- Docker RegistryによるDocker Imageの共有
-
---- 
 #### 仮想環境環境
 
 VM(Virtual Machine)とLinuxコンテナが主要  
@@ -94,5 +69,86 @@ VM(Virtual Machine)とLinuxコンテナが主要
 - capabilities (システムコールへのアクセス権限)
 
 ---
-#### Linuxコンテナ管理ツール
+#### Linuxコンテナのメリット
+
+- ホストのリソースを分離しているだけ  
+  → VMに比べて起動が早い
+- カーネルやデバイスドライバのエミュレートを行わない  
+  → VMに比べて軽量，ハードウェアリソースの有効活用
+
+---
+#### Linuxコンテナのデメリット
+
+- カーネルやハードウェアに関するチューニングができない
+- ホストOSとの分離がVMより弱く，  
+  脆弱性がホストへ影響を及ぼしやすい
+
+---
+#### 主な用途
+
+- マイクロサービスアーキテクチャ  
+  → 1コンテナ1サーバ/ミドルウェア
+- Webサーバのステートレス化
+- Caas (Container as a Service)
+    + GCE(Google Container Engine)
+    + AWS ECS (Elastic Container Service) etc...
+
+---
+#### こんな感じ
+
+![サンプルアーキテクチャ](img/sample-service.png)
+
+---
+#### まとめ
+
+- DockerはVMよりも軽量，ただしVMの上位互換ではない
+- 流行りのマイクロサービスアーキテクチャと相性抜群
+- DBやキャッシュなどのステートフルな部分ではなく，  
+  APIサーバなどステートレスな部分での利用が適する
+
+---
+### 次の発表ではDockerを始める上で
+### 知っておいてほしいことをしゃべります！
+
+---
+
+## Dockerの始め方
+
+---
+
+#### Dockerとは?
+
+Linuxコンテナの  
+管理ツール/エコシステム  
+
+- コンテナライフサイクルの管理
+- Docker CLIによる管理操作の簡易化
+- Dockerfileによるコンテナ環境の作成，配付
+- Docker RegistryによるDocker Imageの共有
+
+--- 
+#### Linuxコンテナ管理ツール群
 ![Linuxコンテナ管理ツール群](img/icons.png)
+
+---
+
+#### なぜDockerを紹介?
+
+おそらく一番普及しているLinuxコンテナ管理ツール
+
+- ドキュメントの充実
+- 様々なツールによるサポート
+- Docker for windowsやDocker for macOSが提供
+  (VM上でLinuxを起動)
+
+---
+
+### Dockerがやっていることを知る
+
+---
+#### Dockerのアーキテクチャ
+![Dockerのアーキテクチャ](http://docs.docker.jp/_images/architecture.png)
+
+@size[10px](アーキテクチャの理解 http://docs.docker.jp/v1.11/engine/understanding-docker.html より引用)
+---
+#### Dockerのライフサイクル
