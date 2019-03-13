@@ -1,5 +1,3 @@
-### 自己紹介
-
 @snap[north-west span-30]
 ![アイコン](img/hetare.jpg)
 @snapend

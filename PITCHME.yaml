@@ -1,4 +1,13 @@
-theme : moon
-highlight : monokai-sublime
-slide-number: true
-transition : fade
+# Layout
+layout : center-left
+theme : night
+theme-override : assets/css/PITCHME.css
+highlight : ir-black
+
+# Behavior
+transition : none
+published : true
+
+# Plugins
+charts : true
+mathjax : TeX-AMS_HTML-full
