@@ -1,5 +1,6 @@
 @snap[west span-30]
 ![アイコン](img/hetare.jpg)
+\@OriishiTakahiro
 @snapend
 
 @snap[east span-60]
@@ -10,7 +11,7 @@
  <li>徳島大学大学院 M1  
  <li>阿南高専プロコン部OB  
  <li>宗教は vim, i3-wm  
- <li>Haskellの文法はふつくしい...  
+ <li>Haskellの文法ふつくしい
  <li>最近の興味はクラウド中心  
 </ul>
 
